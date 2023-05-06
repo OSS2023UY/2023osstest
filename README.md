@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=capsule%20render&fontSize=90" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=00f2fe&height=150&section=header&text=UYteam%20render&fontSize=70" />
 
 # OSS Miniproject
 
