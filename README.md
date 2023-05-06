@@ -55,3 +55,26 @@
 
 
 ## 팀원 소개
+
+<table>
+  <tr>
+    <td>
+      <img src="https://avatars.githubusercontent.com/u/70185738?v=4" width="100px">
+    </td>
+    <td>
+      <h3>이름: 홍길동</h3>
+      <p>학번: 2022xxxx</p>
+      <p>GitHub: <a href="https://github.com/honggildong">https://github.com/honggildong</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://avatars.githubusercontent.com/u/79418116?v=4" width="100px">
+    </td>
+    <td>
+      <h3>이름: 신사임당</h3>
+      <p>학번: 2022xxxx</p>
+      <p>GitHub: <a href="https://github.com/sinsaimdang">https://github.com/sinsaimdang</a></p>
+    </td>
+  </tr>
+</table>
