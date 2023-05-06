@@ -16,7 +16,7 @@
 가게 예약 시스템
 
 ## 소개
-아직 미정
+미정
 
 ## 기능 설명
 <body>
@@ -67,16 +67,16 @@
       </thead>
       <tbody>
         <tr>
-          <td>홍길동</td>
-          <td>20190001</td>
-          <td><a href="https://github.com/honggildong">honggildong</a></td>
-          <td>개발자</td>
+          <td>우지윤</td>
+          <td>22</td>
+          <td><a href="https://github.com/ujiyun">ujiyun</a></td>
+          <td>미정</td>
         </tr>
         <tr>
           <td>김철수</td>
           <td>20190002</td>
-          <td><a href="https://github.com/kimchulsu">kimchulsu</a></td>
-          <td>디자이너</td>
+          <td><a href="https://github.com/HSKYOO">HSKYOO</a></td>
+          <td>미정</td>
         </tr>
       </tbody>
     </table>
