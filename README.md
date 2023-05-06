@@ -1,13 +1,4 @@
-![header]('https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=capsule%20render&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Decorate%20GitHub%20Profile%20or%20any%20Repo%20like%20me!&descAlignY=51&descAlign=62')
-<p align='center'> Decorate GitHub Profile or any Repo like me! </p>
-<p align='center'>
-  <a href="https://github.com/kyechan99/capsule-render/labels/Idea">
-    <img src="https://img.shields.io/badge/IDEA%20ISSUE%20-%23F7DF1E.svg?&style=for-the-badge&&logoColor=white"/>
-  </a>
-  <a href="#demo">
-    <img src="https://img.shields.io/badge/DEMO%20-%234FC08D.svg?&style=for-the-badge&&logoColor=white"/>
-  </a>
-</p>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=c2e9fb&height=200&section=header&text=UYteam&fontSize=70&fontColor=white&fontAlign=50&fontAlignY=50" />
 
 # OSS Miniproject
 
@@ -18,6 +9,32 @@
 아직 미정
 
 ## 기능 설명
+<body>
+    <ul>
+        CRUD
+            <ul>    
+                <li>예약 추가</li>
+                  <ul>
+                        <li>이름</li>
+                        <li>인원수</li>
+                        <li>전화번호</li>
+                        <li>가격</li>
+                        <li>결제 완료 유무</li>
+                        <li>시간대</li>
+                        <li>추가사항</li>
+                </ul>
+                <li>예약 현황 확인 — 그림화</li>
+                <li>예약 수정</li>
+                <li>예약 삭제</li>
+            </ul>
+        <li>파일 저장 및 출력</li>
+        <li>캘린더로 예약 현황 확인</li>
+        <li>예약한 고객 정보 조회</li>
+        <li>대기명단(if 예약이 full 이면)</li>
+        <li>매출 추이</li>
+        <li>휴업 날짜 선택 —> 캘린더에 영향 줌</li>
+    </ul>
+</body>
 
 ## 개발환경 및 언어
 
