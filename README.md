@@ -51,30 +51,32 @@
 |  division  |  stack         |
 |------------|-----------------|
 |Code Management|<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/> <img src="https://img.shields.io/badge/Github-181717?style=flat-square&logo=github&logoColor=white"/> <img src="https://img.shields.io/badge/vscode-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white"/> |
-|Language| <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white"/> |
+|Language| <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=white"/> |
 
 
 ## 팀원 소개
 
 <table>
-  <tr>
-    <td>
-      <img src="https://avatars.githubusercontent.com/u/70185738?v=4" width="100px">
-    </td>
-    <td>
-      <h3>이름: 홍길동</h3>
-      <p>학번: 2022xxxx</p>
-      <p>GitHub: <a href="https://github.com/honggildong">https://github.com/honggildong</a></p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://avatars.githubusercontent.com/u/79418116?v=4" width="100px">
-    </td>
-    <td>
-      <h3>이름: 신사임당</h3>
-      <p>학번: 2022xxxx</p>
-      <p>GitHub: <a href="https://github.com/sinsaimdang">https://github.com/sinsaimdang</a></p>
-    </td>
-  </tr>
-</table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>학번</th>
+          <th>GitHub 계정</th>
+          <th>역할</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>홍길동</td>
+          <td>20190001</td>
+          <td><a href="https://github.com/honggildong">honggildong</a></td>
+          <td>개발자</td>
+        </tr>
+        <tr>
+          <td>김철수</td>
+          <td>20190002</td>
+          <td><a href="https://github.com/kimchulsu">kimchulsu</a></td>
+          <td>디자이너</td>
+        </tr>
+      </tbody>
+    </table>
