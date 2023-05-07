@@ -74,7 +74,7 @@
         </tr>
         <tr>
           <td>김철수</td>
-          <td>20190002</td>
+          <td>22</td>
           <td><a href="https://github.com/HSKYOO">HSKYOO</a></td>
           <td>미정</td>
         </tr>
