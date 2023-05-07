@@ -16,7 +16,7 @@
 가게 예약 시스템
 
 ## 소개
-미정
+TeamUY 우지윤 & 유현석 입니다
 
 ## 기능 설명
 <body>
@@ -70,13 +70,13 @@
           <td>우지윤</td>
           <td>22</td>
           <td><a href="https://github.com/ujiyun">ujiyun</a></td>
-          <td>미정</td>
+          <td>UI design | Programming</td>
         </tr>
         <tr>
-          <td>김철수</td>
+          <td>유현석</td>
           <td>22</td>
           <td><a href="https://github.com/HSKYOO">HSKYOO</a></td>
-          <td>미정</td>
+          <td>Programming</td>
         </tr>
       </tbody>
     </table>
