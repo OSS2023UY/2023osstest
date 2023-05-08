@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=c2e9fb&height=300&section=header&text=UY%20team&fontSize=90&animation=fadeIn&fontAlignY=38&desc=OSS%20Mini%20project&descAlignY=51&descAlign=62&textColor=white" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=6ECEDA&height=300&section=header&text=UY%20team&fontSize=90&animation=fadeIn&fontAlignY=38&desc=OSS%20Mini%20project&descAlignY=51&descAlign=62&textColor=white" />
   <!-- <p>
     <a href="https://github.com/kyechan99/capsule-render/labels/Idea">
       <img src="https://img.shields.io/badge/IDEA%20ISSUE%20-%23F7DF1E.svg?&style=for-the-badge&&logoColor=white"/>
@@ -16,7 +16,7 @@
 가게 예약 시스템
 
 ## 소개
-TeamUY 우지윤 & 유현석 입니다
+TeamUY 우지윤 & 유현석 입니다.
 가게를 예약할 때 손님들이 예약 현황을 보며 예약할 수 있고 사장님이 예약을 관리하고 가게의 매출 추이 등을 확인 할 수 있는 서비스 입니다.
 
 ## 기능 설명
