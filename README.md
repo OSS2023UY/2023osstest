@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=6ECEDA&height=300&section=header&text=UY%20team&fontSize=90&animation=fadeIn&fontAlignY=38&desc=OSS%20Mini%20project&descAlignY=51&descAlign=62&textColor=white" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=B2D7FC&height=300&section=header&text=UY%20team&fontSize=90&animation=fadeIn&fontAlignY=38&desc=OSS%20Mini%20project&descAlignY=51&descAlign=62&textColor=white" />
   <!-- <p>
     <a href="https://github.com/kyechan99/capsule-render/labels/Idea">
       <img src="https://img.shields.io/badge/IDEA%20ISSUE%20-%23F7DF1E.svg?&style=for-the-badge&&logoColor=white"/>
