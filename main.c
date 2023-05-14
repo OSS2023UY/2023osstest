@@ -1,61 +1,79 @@
 #include "CRUD.h"
 
+void showMenu();
+
 int main(){
     tableForm table = {0};
     customer client = {0};
     int selc;
-
+    
+    label:
     while(1){
         showMenu();
-        printf("ì„ íƒ => ");
+        printf("¼±ÅÃ => ");
         scanf("%d", &selc);
 
         switch(selc){
-            //ì˜ˆì•½ í˜„í™©
+            //¿¹¾à ÇöÈ²
             case 1:
                 listSeat(&table);
                 break;
-            //ì˜ˆì•½ ì¶”ê°€
+            //¿¹¾à Ãß°¡
             case 2:
                 addSeat(&table);
                 break;
-            //ì˜ˆì•½ ìˆ˜ì •
+            //¿¹¾à ¼öÁ¤
             case 3:
                 updateSeat(&table, &client);
                 break;
-            //ì˜ˆì•½ ì‚­ì œ
+            //¿¹¾à »èÁ¦
             case 4: 
                 deleteSeat(&table);
                 break;
-            //íŒŒì¼ ë¶ˆëŸ¬ì˜¤ê¸°(from txt file)
+            //ÆÄÀÏ ºÒ·¯¿À±â(from txt file)
             case 5:
 
                 break;
-            //ì˜ˆì•½ëœ ê³ ê° ì •ë³´ ì¡°íšŒ
+            //¿¹¾àµÈ °í°´ Á¤º¸ Á¶È¸
             case 6:
 
                 break;
-            //ëŒ€ê¸°ëª…ë‹¨ í™•ì¸
+            //´ë±â¸í´Ü È®ÀÎ
             case 7:
 
                 break;
-            //ë§¤ì¶œì¶”ì´ í™•ì¸
+            //¸ÅÃâÃßÀÌ È®ÀÎ
             case 8:
 
                 break;
-            //íœ´ì—…ë‚ ì§œ ì„ íƒ
+            //ÈŞ¾÷³¯Â¥ ¼±ÅÃ
             case 9:
 
                 break;
+            case 10:
+                break;
+
             default:
-                printf("ì˜ëª»ëœ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
+                printf("Àß¸øµÈ ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.");
                 break;
         }
     }
     return 0;
 }
 
-//ë©”ë‰´ì°½ 
+//¸Ş´ºÃ¢ 
 void showMenu(){
-
+    printf("¦£¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¤\n");
+    printf("¦¢       ¸Ş´º       ¦¢\n");
+    printf("¦§¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦©\n");
+    printf("¦¢ 1. ¿¹¾à ÇöÈ²     ¦¢\n");
+    printf("¦¢ 2. ¿¹¾à Ãß°¡     ¦¢\n");
+    printf("¦¢ 3. ¿¹¾à ¼öÁ¤     ¦¢\n");
+    printf("¦¢ 4. ¿¹¾à »èÁ¦     ¦¢\n");
+    printf("¦¢ 5. ÆÄÀÏ ºÒ·¯¿À±â ¦¢\n");
+    printf("¦¢ 6. °í°´ Á¤º¸ Á¶È¸¦¢\n");
+    printf("¦¢ 7. ´ë±â¸í´Ü È®ÀÎ ¦¢\n");
+    printf("¦¢ 8. ¸ÅÃâÃßÀÌ È®ÀÎ ¦¢\n");
+    printf("¦¢ 9. ÈŞ¾÷³¯Â¥ ¼±ÅÃ ¦¢\n");
+    printf("¦¦¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¥\n");
 }
