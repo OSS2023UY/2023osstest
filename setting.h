@@ -21,7 +21,7 @@ struct Table{
     char order[100];
 };
 
-typedef struct Table table;
+typedef struct Table tableForm;
 typedef struct CUSTOMER customer;
 
 #endif
