@@ -1,73 +1,75 @@
 #include "CRUD.h"
 
-void listSeat(tableForm *table);
+void listSeat(tableForm *table){
+    printf("Ãß°¡ÇØÁÖ¼¼¿ä\n");
+}
 void addSeat(tableForm *table){
     int seatNum;
-    //ì¢Œì„ ì…ë ¥
-    printf("ì¶”ê°€í•  ì¢Œì„ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
+    //ÁÂ¼® ÀÔ·Â
+    printf("Ãß°¡ÇÒ ÁÂ¼® ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
     scanf("%d", &seatNum);
 
-    //ì´ë¯¸ ì‚¬ìš©ì¤‘ì¸ ì¢Œì„ì´ë©´ í‘œì‹œ
+    //ÀÌ¹Ì »ç¿ëÁßÀÎ ÁÂ¼®ÀÌ¸é Ç¥½Ã
     if(table->s_index[seatNum-1] != 0) {
-        printf("ì´ë¯¸ ì‚¬ìš©ì¤‘ì¸ ì¢Œì„ì…ë‹ˆë‹¤.\n");
+        printf("ÀÌ¹Ì »ç¿ëÁßÀÎ ÁÂ¼®ÀÔ´Ï´Ù.\n");
         return;
     }
-    //ì¢Œì„ ì¶”ê°€
+    //ÁÂ¼® Ãß°¡
     table->s_index[seatNum-1] = 1;
-    //ì‹œê°„ ì¶”ê°€(ì¶”ê°€í•´ì•¼ë¨!)
-    //(ì‹œê°„ ì¶”ê°€ ì½”ë“œ)
+    //½Ã°£ Ãß°¡(Ãß°¡ÇØ¾ßµÊ!)
+    //(½Ã°£ Ãß°¡ ÄÚµå)
 
-    // ì™„ë£Œ í‘œì‹œ
-    printf("%dë²ˆ ì¢Œì„ì´ ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤.\n", seatNum);
+    // ¿Ï·á Ç¥½Ã
+    printf("%d¹ø ÁÂ¼®ÀÌ Ãß°¡µÇ¾ú½À´Ï´Ù.\n", seatNum);
 }
 void updateSeat(tableForm *table, customer *cust) {
     int seatNum, choice, addedTime, timeDiff;
-    printf("ë³€ê²½í•  ì¢Œì„ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
+    printf("º¯°æÇÒ ÁÂ¼® ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
     scanf("%d", &seatNum);
 
     if (table->s_index[seatNum - 1] == 0) {
-        printf("ì‚¬ìš© ì¤‘ì¸ ì¢Œì„ì´ ì•„ë‹™ë‹ˆë‹¤.\n");
+        printf("»ç¿ë ÁßÀÎ ÁÂ¼®ÀÌ ¾Æ´Õ´Ï´Ù.\n");
         return;
     }
 
-    printf("[1] ê³ ê° ì •ë³´ ë³€ê²½\n[2] ë©”ë‰´ ë³€ê²½\n[3] ì‹œê°„ ì¶”ê°€/ì¶•ì†Œ\n");
-    printf("ì›í•˜ëŠ” ì‘ì—…ì˜ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
+    printf("[1] °í°´ Á¤º¸ º¯°æ\n[2] ¸Ş´º º¯°æ\n[3] ½Ã°£ Ãß°¡/Ãà¼Ò\n");
+    printf("¿øÇÏ´Â ÀÛ¾÷ÀÇ ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
     scanf("%d", &choice);
 
     switch (choice) {
         case 1:
-            printf("ë³€ê²½í•  ê³ ê° ì •ë³´ë¥¼ ì…ë ¥í•˜ì„¸ìš”.\n");
-            printf("ì´ë¦„ : ");
+            printf("º¯°æÇÒ °í°´ Á¤º¸¸¦ ÀÔ·ÂÇÏ¼¼¿ä.\n");
+            printf("ÀÌ¸§ : ");
             scanf("%s", cust->name);
-            printf("ì¸ì› ìˆ˜ : ");
+            printf("ÀÎ¿ø ¼ö : ");
             scanf("%d", &cust->people);
-            printf("ì „í™”ë²ˆí˜¸ : ");
+            printf("ÀüÈ­¹øÈ£ : ");
             scanf("%d", &cust->phoneNum);
-            printf("ê°€ê²© : ");
+            printf("°¡°İ : ");
             scanf("%d", &cust->price);
-            printf("ì§€ë¶ˆ ì—¬ë¶€(1: ì§€ë¶ˆ ì™„ë£Œ, 0: ë¯¸ì§€ë¶ˆ) : ");
+            printf("ÁöºÒ ¿©ºÎ(1: ÁöºÒ ¿Ï·á, 0: ¹ÌÁöºÒ) : ");
             scanf("%d", &cust->isPaid);
             break;
         case 2:
-            printf("ë³€ê²½í•  ë©”ë‰´ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
+            printf("º¯°æÇÒ ¸Ş´º¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
             scanf("%s", cust->Menu);
-            printf("ì¶”ê°€ ìš”ì²­ì‚¬í•­ì„ ì…ë ¥í•˜ì„¸ìš” : ");
+            printf("Ãß°¡ ¿äÃ»»çÇ×À» ÀÔ·ÂÇÏ¼¼¿ä : ");
             scanf("%s", cust->extra);
             break;
         case 3:
-            printf("ë³€ê²½í•  ì‹œê°„ì„ ì…ë ¥í•˜ì„¸ìš”(ë‹¨ìœ„: ì‹œê°„) : ");
+            printf("º¯°æÇÒ ½Ã°£À» ÀÔ·ÂÇÏ¼¼¿ä(´ÜÀ§: ½Ã°£) : ");
             scanf("%d", &timeDiff);
             table->time += timeDiff;
             if (timeDiff > 0) {
-                printf("%dì‹œê°„ì´ ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤.\n", timeDiff);
+                printf("%d½Ã°£ÀÌ Ãß°¡µÇ¾ú½À´Ï´Ù.\n", timeDiff);
             } else if (timeDiff < 0) {
-                printf("%dì‹œê°„ì´ ì¶•ì†Œë˜ì—ˆìŠµë‹ˆë‹¤.\n", -timeDiff);
+                printf("%d½Ã°£ÀÌ Ãà¼ÒµÇ¾ú½À´Ï´Ù.\n", -timeDiff);
             } else {
-                printf("ì‹œê°„ ë³€ê²½ì´ ì—†ìŠµë‹ˆë‹¤.\n");
+                printf("½Ã°£ º¯°æÀÌ ¾ø½À´Ï´Ù.\n");
             }
             break;
         default:
-            printf("ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤.\n");
+            printf("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.\n");
             break;
     }
 }
@@ -77,14 +79,14 @@ void addOrder(tableForm *table){
 }
 void deleteSeat(tableForm *table){
     int seatNum;
-    printf("ì‚­ì œí•  ì¢Œì„ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
+    printf("»èÁ¦ÇÒ ÁÂ¼® ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
     scanf("%d", &seatNum);
 
     if (table->s_index[seatNum-1] == 0) {
-        printf("í•´ë‹¹ ì¢Œì„ì€ ì´ë¯¸ ë¹„ì–´ìˆìŠµë‹ˆë‹¤.\n");
+        printf("ÇØ´ç ÁÂ¼®Àº ÀÌ¹Ì ºñ¾îÀÖ½À´Ï´Ù.\n");
         return;
     }
 
     table->s_index[seatNum-1] = 0;
-    printf("%dë²ˆ ì¢Œì„ì´ ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.\n", seatNum);
+    printf("%d¹ø ÁÂ¼®ÀÌ »èÁ¦µÇ¾ú½À´Ï´Ù.\n", seatNum);
 }
