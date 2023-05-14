@@ -8,10 +8,11 @@
 struct CUSTOMER{
     char name[SIZE];
     int people;
-    int phonenum;
+    int phoneNum;
     int price;
-    int ispaid;
+    int isPaid;
     char time[SIZE];
+    char Menu[SIZE];
     char extra[SIZE];
 };
 
@@ -21,7 +22,7 @@ struct Table{
     char order[100];
 };
 
-typedef struct Table table;
+typedef struct Table tableForm;
 typedef struct CUSTOMER customer;
 
 #endif
