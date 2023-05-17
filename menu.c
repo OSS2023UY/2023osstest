@@ -1,6 +1,14 @@
+#include "setting.h"
+
 struct Menu{ 
-    int ChickenSkewers; // ´ß²¿Ä¡
-    int Ramen; //¶ó¸é
-    int Gimbob; //±è¹ä
-    int Tteokbokki; //¶±ººÀÌ
+    char foodName[SIZE];    //À½½Ä ÀÌ¸§
+    int foodPrice;          //À½½Ä °¡°İ
+    int count;              //À½½Ä ÆÈ¸° È½¼ö --> ¸ÅÃâ ÃßÀÌ ºĞ¼® ¶§ »ç¿ë           
 };
+
+typedef struct Menu ChickenSkewer;
+typedef struct Menu Ramen;
+typedef struct Menu Gimbob;
+typedef struct Menu Tteokbokki;
+
+// ChickenSkewer | Ramen | Gimbob | Tteokbokki
