@@ -1,11 +1,10 @@
-#ifndef SETTING_H
-#define SETTING_H
 #include <stdio.h>
-#include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
-#define SIZE 256
+#include <string.h>
+#include "CRUD.h"
 
-int count = 0; // 총 예약 개수
+
 
 
 struct CUSTOMER{
@@ -36,4 +35,26 @@ typedef struct Table tableForm[SIZE];
 typedef struct CUSTOMER customer[SIZE];
 typedef struct Day day[12][31];
 
-#endif
+
+int numRe = 0; 
+
+void search(day *day){
+    char sname[50]; //고객 이름
+    int mm; // 월
+
+    printf("해당 월을 입력하세요. ");
+    scanf("%d", &mm);
+    printf("고객의 이름을 입력하세요. ");
+    scanf("%c",&sname);
+    
+
+    // for(int i=0; i<numRe; i++){
+    //     if(strcmp(list[i].name, sname) == 0)
+    //     printf("%s %d %s %d %d %s %s\n", list[i].name, list[i].num_people, list[i].phone, list[i].price, list[i].check, list[i].time, list[i].notes);
+    // }
+
+    for(int i=0; i<31; i++){
+        for(int j=0; j<12)
+        if(strcmp(day[mm-1][i], sname) == 0)
+    }
+}

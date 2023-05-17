@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=B2D7FC&height=300&section=header&text=UY%20team&fontSize=90&animation=fadeIn&fontAlignY=38&desc=OSS%20Mini%20project&descAlignY=51&descAlign=62&textColor=white" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=B2D7FC&height=300&section=header&text=UY%20team&fontSize=90&animation=fadeIn&fontAlignY=38&desc=OSS%20Mini%20project&descAlignY=51&descAlign=62" />
   <!-- <p>
     <a href="https://github.com/kyechan99/capsule-render/labels/Idea">
       <img src="https://img.shields.io/badge/IDEA%20ISSUE%20-%23F7DF1E.svg?&style=for-the-badge&&logoColor=white"/>
@@ -12,42 +12,42 @@
 
 # OSS Miniproject
 
-## ì£¼ì œ
-ê°€ê²Œ ì˜ˆì•½ ì‹œìŠ¤í…œ
+## ÁÖÁ¦
+°¡°Ô ¿¹¾à ½Ã½ºÅÛ
 
-## ì†Œê°œ
-TeamUY ìš°ì§€ìœ¤ & ìœ í˜„ì„ ìž…ë‹ˆë‹¤.
-ê°€ê²Œë¥¼ ì˜ˆì•½í•  ë•Œ ì†ë‹˜ë“¤ì´ ì˜ˆì•½ í˜„í™©ì„ ë³´ë©° ì˜ˆì•½í•  ìˆ˜ ìžˆê³  ì‚¬ìž¥ë‹˜ì´ ì˜ˆì•½ì„ ê´€ë¦¬í•˜ê³  ê°€ê²Œì˜ ë§¤ì¶œ ì¶”ì´ ë“±ì„ í™•ì¸ í•  ìˆ˜ ìžˆëŠ” ì„œë¹„ìŠ¤ ìž…ë‹ˆë‹¤.
+## ¼Ò°³
+TeamUY ¿ìÁöÀ± & À¯Çö¼® ÀÔ´Ï´Ù.
+°¡°Ô¸¦ ¿¹¾àÇÒ ¶§ ¼Õ´ÔµéÀÌ ¿¹¾à ÇöÈ²À» º¸¸ç ¿¹¾àÇÒ ¼ö ÀÖ°í »çÀå´ÔÀÌ ¿¹¾àÀ» °ü¸®ÇÏ°í °¡°ÔÀÇ ¸ÅÃâ ÃßÀÌ µîÀ» È®ÀÎ ÇÒ ¼ö ÀÖ´Â ¼­ºñ½º ÀÔ´Ï´Ù.
 
-## ê¸°ëŠ¥ ì„¤ëª…
+## ±â´É ¼³¸í
 <body>
     <ul>
         <li>CRUD</li>
             <ul>    
-                <li>ì˜ˆì•½ ì¶”ê°€</li>
+                <li>¿¹¾à Ãß°¡</li>
                   <ul>
-                        <li>ì´ë¦„</li>
-                        <li>ì¸ì›ìˆ˜</li>
-                        <li>ì „í™”ë²ˆí˜¸</li>
-                        <li>ê°€ê²©</li>
-                        <li>ê²°ì œ ì™„ë£Œ ìœ ë¬´</li>
-                        <li>ì‹œê°„ëŒ€</li>
-                        <li>ì¶”ê°€ì‚¬í•­</li>
+                        <li>ÀÌ¸§</li>
+                        <li>ÀÎ¿ø¼ö</li>
+                        <li>ÀüÈ­¹øÈ£</li>
+                        <li>°¡°Ý</li>
+                        <li>°áÁ¦ ¿Ï·á À¯¹«</li>
+                        <li>½Ã°£´ë</li>
+                        <li>Ãß°¡»çÇ×</li>
                 </ul>
-                <li>ì˜ˆì•½ í˜„í™© í™•ì¸ â€” ê·¸ë¦¼í™”</li>
-                <li>ì˜ˆì•½ ìˆ˜ì •</li>
-                <li>ì˜ˆì•½ ì‚­ì œ</li>
+                <li>¿¹¾à ÇöÈ² È®ÀÎ ? ±×¸²È­</li>
+                <li>¿¹¾à ¼öÁ¤</li>
+                <li>¿¹¾à »èÁ¦</li>
             </ul>
-        <li>íŒŒì¼ ì €ìž¥ ë° ì¶œë ¥</li>
-        <li>ìº˜ë¦°ë”ë¡œ ì˜ˆì•½ í˜„í™© í™•ì¸</li>
-        <li>ì˜ˆì•½í•œ ê³ ê° ì •ë³´ ì¡°íšŒ</li>
-        <li>ëŒ€ê¸°ëª…ë‹¨(if ì˜ˆì•½ì´ full ì´ë©´)</li>
-        <li>ë§¤ì¶œ ì¶”ì´</li>
-        <li>íœ´ì—… ë‚ ì§œ ì„ íƒ â€”> ìº˜ë¦°ë”ì— ì˜í–¥ ì¤Œ</li>
+        <li>ÆÄÀÏ ÀúÀå ¹× Ãâ·Â</li>
+        <li>Ä¶¸°´õ·Î ¿¹¾à ÇöÈ² È®ÀÎ</li>
+        <li>¿¹¾àÇÑ °í°´ Á¤º¸ Á¶È¸</li>
+        <li>´ë±â¸í´Ü(if ¿¹¾àÀÌ full ÀÌ¸é)</li>
+        <li>¸ÅÃâ ÃßÀÌ</li>
+        <li>ÈÞ¾÷ ³¯Â¥ ¼±ÅÃ ?> Ä¶¸°´õ¿¡ ¿µÇâ ÁÜ</li>
     </ul>
 </body>
 
-## ê°œë°œí™˜ê²½ ë° ì–¸ì–´
+## °³¹ßÈ¯°æ ¹× ¾ð¾î
 
 |  division  |  stack         |
 |------------|-----------------|
@@ -55,26 +55,26 @@ TeamUY ìš°ì§€ìœ¤ & ìœ í˜„ì„ ìž…ë‹ˆë‹¤.
 |Language| <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=white"/> |
 
 
-## íŒ€ì› ì†Œê°œ
+## ÆÀ¿ø ¼Ò°³
 
 <table>
       <thead>
         <tr>
-          <th>ì´ë¦„</th>
-          <th>í•™ë²ˆ</th>
-          <th>GitHub ê³„ì •</th>
-          <th>ì—­í• </th>
+          <th>ÀÌ¸§</th>
+          <th>ÇÐ¹ø</th>
+          <th>GitHub °èÁ¤</th>
+          <th>¿ªÇÒ</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>ìš°ì§€ìœ¤</td>
+          <td>¿ìÁöÀ±</td>
           <td>22</td>
           <td><a href="https://github.com/ujiyun">ujiyun</a></td>
           <td>UI design | Programming</td>
         </tr>
         <tr>
-          <td>ìœ í˜„ì„</td>
+          <td>À¯Çö¼®</td>
           <td>22</td>
           <td><a href="https://github.com/HSKYOO">HSKYOO</a></td>
           <td>Programming</td>
