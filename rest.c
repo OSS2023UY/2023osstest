@@ -1,4 +1,5 @@
 #include "CRUD.h"
+
 void rest(day *day){
     printf("휴무일을 선택하세요");
 
