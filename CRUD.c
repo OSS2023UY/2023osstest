@@ -57,7 +57,7 @@ void addSeat(day *day, bunsik *menu){
     printf("예약 좌석 번호를 입력하세요 : ");
     scanf("%d", &seatNum);
 
-    // //이미 예약이 다 찬 좌석이면 return
+    //이미 예약이 다 찬 좌석이면 return
     // if(day[m][d]->table[seatNum-1]->s_index != 0) {
     //     printf("예약 할 수 없는 좌석입니다.\n");
     //     return;

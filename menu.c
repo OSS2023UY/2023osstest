@@ -1,13 +1,5 @@
 #include "setting.h"
 
-struct Menu{ 
-    char foodName[50];      //음식 이름
-    int foodPrice;          //음식 가격
-    int count;              //음식 팔린 횟수 --> 매출 추이 분석 때 사용           
-};
-
-typedef struct Menu bunsik[4];
-
 void ResetMenu(bunsik menu){      //메뉴 초기화 함수, 생성자 역할을 하기 때문에 한번은 호출할
     strcpy(menu[0].foodName, "ChickenSkewer");
     menu[0].foodPrice = 4000;
