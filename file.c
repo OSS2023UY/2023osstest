@@ -1,34 +1,34 @@
-#include <stdio.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <setting.h>
+// #include <stdio.h>
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
+// #include <setting.h>
 
 
-// 파일 저장 함수
-void saveList(day *day) {
-    char filename[100];
-    printf("저장할 파일의 이름을 입력하세요: ");
-    scanf("%s", filename);
+// // 파일 저장 함수
+// void saveList(day *day) {
+//     char filename[100];
+//     printf("저장할 파일의 이름을 입력하세요: ");
+//     scanf("%s", filename);
 
-    FILE *fp;
-    fp = fopen(filename, "w"); // 사용자가 입력한 파일 이름으로 파일 열기
+//     FILE *fp;
+//     fp = fopen(filename, "w"); // 사용자가 입력한 파일 이름으로 파일 열기
 
-    if (fp == NULL) {
-        printf("파일을 열 수 없습니다.\n");
-        return;
-    }
+//     if (fp == NULL) {
+//         printf("파일을 열 수 없습니다.\n");
+//         return;
+//     }
 
 
-    // 파일에 예약 정보 쓰기
-    for(int i=0; i<16; i++){
-        for(int j=0; j<12; i++){
-        printf("%s %d %d %d %d\n", day[mm-1][dd-1]->table[i]->customer[j]->name, day[mm-1][dd-1]->table[i]->customer[j]->people, day[mm-1][dd-1]->table[i]->customer[j]->phoneNum, day[mm-1][dd-1]->table[i]->customer[j]->price,day[mm-1][dd-1]->table[i]->customer[j]->isPaid);
-        }
-    }
+//     // 파일에 예약 정보 쓰기
+//     for(int i=0; i<16; i++){
+//         for(int j=0; j<12; i++){
+//         printf("%s %d %d %d %d\n", day[mm-1][dd-1]->table[i]->customer[j]->name, day[mm-1][dd-1]->table[i]->customer[j]->people, day[mm-1][dd-1]->table[i]->customer[j]->phoneNum, day[mm-1][dd-1]->table[i]->customer[j]->price,day[mm-1][dd-1]->table[i]->customer[j]->isPaid);
+//         }
+//     }
 
-    fclose(fp); // 파일 닫기
-}
+//     fclose(fp); // 파일 닫기
+// }
 
 // // 파일 출력 함수
 // void printList() {
