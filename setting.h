@@ -7,7 +7,6 @@
 
 int count = 0; // ÃÑ ¿¹¾à °³¼ö
 
-
 struct CUSTOMER{
     char name[SIZE];
     int people;
