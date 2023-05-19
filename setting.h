@@ -17,6 +17,7 @@ struct CUSTOMER{
     char time[SIZE];
     char Menu[SIZE];
     char extra[SIZE]; 
+    
     int nop;
 };
 

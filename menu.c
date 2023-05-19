@@ -1,6 +1,8 @@
 struct Menu{ 
-    int ChickenSkewers; // ´ß²¿Ä¡
-    int Ramen; //¶ó¸é
-    int Gimbob; //±è¹ä
-    int Tteokbokki; //¶±ººÀÌ
+    int ChickenSkewers; // Â´ÃŸÂ²Â¿Ã„Â¡
+    int Ramen; //Â¶Ã³Â¸Ã©
+    int Gimbob; //Â±Ã¨Â¹Ã¤
+    int Tteokbokki; //Â¶Â±ÂºÂºÃ€ÃŒ
 };
+
+
