@@ -25,6 +25,4 @@ void UpdateMenu(bunsik menu){
     menu[3].foodPrice = 7000;
     menu[3].count = 0;
 }
-
-
 // ChickenSkewer | Ramen | Gimbob | Tteokbokki
