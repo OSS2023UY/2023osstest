@@ -5,7 +5,15 @@ void showMenu();
 int main(){
     tableForm table = {0};
     customer client = {0};
+    day day ={0};
+    bunsik menu;
+ 
+
+
+    UpdateMenu(&menu);  // 배열에 값 설정
+
     int selc;
+
     
     label:
     while(1){
@@ -16,19 +24,19 @@ int main(){
         switch(selc){
             //예약 현황
             case 1:
-                listSeat(&table);
+                listSeat(&day);
                 break;
             //예약 추가
             case 2:
-                addSeat(&table);
+                addSeat(&day,&menu);
                 break;
             //예약 수정
             case 3:
-                updateSeat(&table, &client);
+                updateSeat(&day);
                 break;
             //예약 삭제
             case 4: 
-                deleteSeat(&table);
+                deleteSeat(&day);
                 break;
             //파일 불러오기(from txt file)
             case 5:

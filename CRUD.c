@@ -1,4 +1,6 @@
 #include "CRUD.h"
+#include <string.h>
+
 
 void listSeat(day *day) {
 
@@ -33,7 +35,7 @@ void listSeat(day *day) {
         }
     }
 }
-void addSeat(day *day){
+void addSeat(day *day, bunsik *menu){
 
     int dd; // 일
     int mm; // 월
@@ -55,11 +57,11 @@ void addSeat(day *day){
     printf("예약 좌석 번호를 입력하세요 : ");
     scanf("%d", &seatNum);
 
-    //이미 예약이 다 찬 좌석이면 return
-    if(day[m][d]->table[seatNum-1]->s_index != 0) {
-        printf("예약 할 수 없는 좌석입니다.\n");
-        return;
-    }
+    // //이미 예약이 다 찬 좌석이면 return
+    // if(day[m][d]->table[seatNum-1]->s_index != 0) {
+    //     printf("예약 할 수 없는 좌석입니다.\n");
+    //     return;
+    // }
 
 
 ///////////////////////////////예약 가능한 시간 보여주기!
@@ -72,21 +74,43 @@ void addSeat(day *day){
     scanf("%d", &during);
 
 
+    char name[50];
 
     printf("고객 정보를 입력하세요.\n");
     printf("----------------------\n");
     printf("이름 : ");
-    scanf("%s", day[m][d]->table[seatNum-1]->customer[clock-1]->name);
+    getchar();
+    fgets(name, sizeof(name), stdin);
+    name[strcspn(name, "\n")] = '\0';
+    getchar();
+    strcpy(day[m][d]->table[seatNum-1]->customer[clock-1]->name, name);
     printf("인원 수 : ");
     scanf("%d", &day[m][d]->table[seatNum-1]->customer[clock-1]->people);
+    getchar();
     printf("전화번호 : ");
     scanf("%d", &day[m][d]->table[seatNum-1]->customer[clock-1]->phoneNum);
-    printf("가격 : ");
-    scanf("%d", &day[m][d]->table[seatNum-1]->customer[clock-1]->price);
     printf("지불 여부(1: 지불 완료, 0: 미지불) : ");
     scanf("%d", &day[m][d]->table[seatNum-1]->customer[clock-1]->isPaid);
-    printf("메뉴를 입력하세요 : ");
-    scanf("%s", day[m][d]->table[seatNum-1]->customer[clock-1]->Menu);
+    /////////////////////////////////////////////
+
+     printf("메뉴를 입력하세요:\n");
+    for (int i = 0; i < 4; i++) {
+        printf("%s: %d원\n", menu[i]->foodName, menu[i]->foodPrice);
+    }
+
+    printf("메뉴 번호를 선택하세요: ");
+    int menuNum;
+    scanf("%d", &menuNum);
+    if (menuNum < 1 || menuNum > 4) {
+        printf("잘못된 메뉴 번호입니다.\n");
+        return;
+    }
+
+    strcpy(day[m][d]->table[seatNum-1]->customer[clock-1]->Menu, menu[menuNum - 1]->foodName);
+
+    day[m][d]->table[seatNum-1]->customer[clock-1]->price = menu[menuNum - 1]->foodPrice * day[m][d]->table[seatNum-1]->customer[clock-1]->people;
+
+    ///////////////////////////////////////////
     printf("추가 요청사항을 입력하세요 : ");
     scanf("%s", day[m][d]->table[seatNum-1]->customer[clock-1]->extra);
 
@@ -134,30 +158,66 @@ void updateSeat(day *day) {
     }
 
     int t = seatNum-1;
+
+    
+    int now;
+    printf("현재 고객의 전화번호를 입력하세요.");
+    scanf("%d", &now);
     
     printf("[1] 고객 정보 변경\n[2] 메뉴 변경\n[3] 시간 추가/축소\n");
     printf("원하는 작업의 번호를 입력하세요 : ");
     scanf("%d", &choice);
 
+            char name1[50];
+            int people1;
+            int phoneNum1;
+            int price1;
+            int isPaid1;
+
     switch (choice) {
         case 1:
+
+          
+            for(int i=0; i<12; i++) {
+                
+            }
             printf("변경할 고객 정보를 입력하세요.\n");
             printf("이름 : ");
-            scanf("%s", cust[t]->name);
+            scanf("%s", name1);
             printf("인원 수 : ");
-            scanf("%d", &cust[t]->people);
+            scanf("%d", &people1);
             printf("전화번호 : ");
-            scanf("%d", &cust[t]->phoneNum);
+            scanf("%d", &phoneNum1);
             printf("가격 : ");
-            scanf("%d", &cust[t]->price);
+            scanf("%d", &price1);
             printf("지불 여부(1: 지불 완료, 0: 미지불) : ");
-            scanf("%d", &cust[t]->isPaid);
+            scanf("%d", &isPaid1);
+
+            for(int i=0; i<12; i++) {
+                if(day[m][d]->table[t]->customer[i]->phoneNum == now){
+                    strcpy(day[m][d]->table[t]->customer[i]->name, name1);
+                    day[m][d]->table[t]->customer[i]->people = people1;
+                    day[m][d]->table[t]->customer[i]->phoneNum = phoneNum1;
+                    day[m][d]->table[t]->customer[i]->price =price1;
+                    day[m][d]->table[t]->customer[i]-> isPaid =isPaid1;
+                }
+            }
             break;
         case 2:
-            printf("변경할 메뉴를 입력하세요 : ");
-            scanf("%s", cust[t]->Menu);
-            printf("추가 요청사항을 입력하세요 : ");
-            scanf("%s", cust[t]->extra);
+
+            // for(int i=0; i<12; i++) {
+            //     if(day[m][d]->table[t]->customer[i]->phoneNum == now){
+            //         strcpy(day[m][d]->table[t]->customer[i]->name, name);
+            //         day[m][d]->table[t]->customer[i]->people = people;
+            //         day[m][d]->table[t]->customer[i]->phoneNum = phoneNum;
+            //         day[m][d]->table[t]->customer[i]->price =price;
+            //         day[m][d]->table[t]->customer[i]-> isPaid =isPaid;
+            //     }
+            // }
+            // printf("변경할 메뉴를 입력하세요 : ");
+            // scanf("%s", cust[t]->Menu);
+            // printf("추가 요청사항을 입력하세요 : ");
+            // scanf("%s", cust[t]->extra);
             break;
         case 3:
             printf("변경할 시간을 입력하세요(단위: 시간) : ");
@@ -177,19 +237,50 @@ void updateSeat(day *day) {
     }
 }
 
-void addOrder(tableForm *table){
 
-}
-void deleteSeat(tableForm *table){
+void deleteSeat(day *day){
+     int dd;
+    int mm;
+
+    printf("날짜를 입력하세요 : ");
+    scanf("%d %d", &mm, &dd);
+
     int seatNum;
     printf("삭제할 좌석 번호를 입력하세요 : ");
     scanf("%d", &seatNum);
 
-    if (table[seatNum-1]->s_index == 0) {
+    if (day[mm-1][dd-1]->table[seatNum-1]->s_index == 0) {
         printf("해당 좌석은 이미 비어있습니다.\n");
         return;
     }
 
-    table[seatNum-1]->s_index = 0;
+    for (int i = 0; i < 12; i++) {
+        if (day[mm-1][dd-1]->table[seatNum-1]->customer[i] != NULL) {
+            day[mm-1][dd-1]->table[seatNum-1]->customer[i] = NULL;
+        }
+    }
+
+    day[mm-1][dd-1]->table[seatNum-1]->s_index = 0;
     printf("%d번 좌석이 삭제되었습니다.\n", seatNum);
+
+}
+
+
+
+void UpdateMenu(bunsik *menu){
+    strcpy(menu[0]->foodName, "ChickenSkewer");
+    menu[0]->foodPrice = 4000;
+    menu[0]->count = 0;
+
+    strcpy(menu[1]->foodName, "Ramen");
+    menu[1]->foodPrice = 8500;
+    menu[1]->count = 0;
+
+    strcpy(menu[2]->foodName, "Gimbob");
+    menu[2]->foodPrice = 3000;
+    menu[2]->count = 0;
+
+    strcpy(menu[3]->foodName, "Tteokbokki");
+    menu[3]->foodPrice = 7000;
+    menu[3]->count = 0;
 }
