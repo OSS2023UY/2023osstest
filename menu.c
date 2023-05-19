@@ -9,7 +9,7 @@ struct Menu{
 
 typedef struct Menu bunsik[4];
 
-void UpdateMenu(bunsik menu){
+void ResetMenu(bunsik menu){      //메뉴 초기화 함수, 생성자 역할을 하기 때문에 한번은 호출할 필요 있음
     strcpy(menu[0].foodName, "ChickenSkewer");
     menu[0].foodPrice = 4000;
     menu[0].count = 0;
