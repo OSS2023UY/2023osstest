@@ -69,7 +69,7 @@ void showGraph(day day) {
     int month;
     printf("확인하고 싶은 달을 입력하세요: ");
     scanf("%d", &month);
-    printf("%d월 매출 추이\n", month);
+    printf("%d월 매출 추이 (단위: 만원)\n", month);
 
     // 매출 추이 그래프 출력
     int weekly_profit[5] = {0};  // 주별 매출 배열 초기화
@@ -93,7 +93,7 @@ void showGraph(day day) {
     // 그래프 출력
     for (int i = 0; i < 5; i++) {
         printf("주차 %d |", i + 1);
-        for (int j = 0; j < weekly_profit[i]; j += 100) {
+        for (int j = 0; j < weekly_profit[i]; j += 10000) {     //단위 만원
             printf("-");
         }
         printf("|");
