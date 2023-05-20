@@ -6,64 +6,64 @@
 //customer[n]에 예약한 손님의 price 변수를 전부더하기
 //해당 변수를 통해 그래프를 만들기 (1주일 기준)
 
-void calProfit(day *day){
-    int month = 0;
-    //주수입(주 간격)
-    int w1_profit = 0;  //1주
-    int w2_profit = 0;  //2주
-    int w3_profit = 0;  //3주
-    int w4_profit = 0;  //4주
-    int w5_profit = 0;  //5주
+// void calProfit(day *day){
+//     int month = 0;
+//     //주수입(주 간격)
+//     int w1_profit = 0;  //1주
+//     int w2_profit = 0;  //2주
+//     int w3_profit = 0;  //3주
+//     int w4_profit = 0;  //4주
+//     int w5_profit = 0;  //5주
 
-    printf("확인하고 싶은 달을 입력하세요: ");
-    scanf("%d", &month);
+//     printf("확인하고 싶은 달을 입력하세요: ");
+//     scanf("%d", &month);
 
-    for(int j = 0; j < 7; j++){
-        //만약 customer[n]의 손님이 customer[n+1]과 동일하다면 customer[n+2]로 넘어가기(continue)
-        for(int n = 0; n < 16; n++){
-            for(int m = 0; m < 12; m++){
-                if(m > 0 && strcmp(day[month][j]->table[n]->customer[n], day[month][j]->table[n]->customer[n-1]) == 0) continue;
-                w1_profit += day[month][j]->table[n]->customer[m]->price;
-            }
-        }
-    }
+//     for(int j = 0; j < 7; j++){
+//         //만약 customer[n]의 손님이 customer[n+1]과 동일하다면 customer[n+2]로 넘어가기(continue)
+//         for(int n = 0; n < 16; n++){
+//             for(int m = 0; m < 12; m++){
+//                 if(m > 0 && strcmp(day[month][j]->table[n]->customer[n], day[month][j]->table[n]->customer[n-1]) == 0) continue;
+//                 w1_profit += day[month][j]->table[n]->customer[m]->price;
+//             }
+//         }
+//     }
 
-    for(int j = 7; j < 14; j++){
-        for(int n = 0; n < 16; n++){
-            for(int m = 0; m < 12; m++){
-                if(strcmp(day[month][j]->table[n]->customer[n], day[month][j]->table[n]->customer[n-1]) == 0) continue;
-                w2_profit += day[month][j]->table[n]->customer[m]->price;
-            }
-        }
-    }
+//     for(int j = 7; j < 14; j++){
+//         for(int n = 0; n < 16; n++){
+//             for(int m = 0; m < 12; m++){
+//                 if(strcmp(day[month][j]->table[n]->customer[n], day[month][j]->table[n]->customer[n-1]) == 0) continue;
+//                 w2_profit += day[month][j]->table[n]->customer[m]->price;
+//             }
+//         }
+//     }
 
-    for(int j = 14; j < 21; j++){
-        for(int n = 0; n < 16; n++){
-            for(int m = 0; m < 12; m++){
-                if(strcmp(day[month][j]->table[n]->customer[n], day[month][j]->table[n]->customer[n-1]) == 0) continue;
-                w3_profit += day[month][j]->table[n]->customer[m]->price;
-            }
-        }
-    }
+//     for(int j = 14; j < 21; j++){
+//         for(int n = 0; n < 16; n++){
+//             for(int m = 0; m < 12; m++){
+//                 if(strcmp(day[month][j]->table[n]->customer[n], day[month][j]->table[n]->customer[n-1]) == 0) continue;
+//                 w3_profit += day[month][j]->table[n]->customer[m]->price;
+//             }
+//         }
+//     }
 
-    for(int j = 21; j < 28; j++){
-        for(int n = 0; n < 16; n++){
-            for(int m = 0; m < 12; m++){
-                if(strcmp(day[month][j]->table[n]->customer[n], day[month][j]->table[n]->customer[n-1]) == 0) continue;
-                w4_profit += day[month][j]->table[n]->customer[m]->price;
-            }
-        }
-    }
+//     for(int j = 21; j < 28; j++){
+//         for(int n = 0; n < 16; n++){
+//             for(int m = 0; m < 12; m++){
+//                 if(strcmp(day[month][j]->table[n]->customer[n], day[month][j]->table[n]->customer[n-1]) == 0) continue;
+//                 w4_profit += day[month][j]->table[n]->customer[m]->price;
+//             }
+//         }
+//     }
 
-    for(int j = 28; j < 31; j++){
-        for(int n = 0; n < 16; n++){
-            for(int m = 0; m < 12; m++){
-                if(strcmp(day[month][j]->table[n]->customer[n], day[month][j]->table[n]->customer[n-1]) == 0) continue;
-                w5_profit += day[month][j]->table[n]->customer[m]->price;
-            }
-        }
-    }
-}
+//     for(int j = 28; j < 31; j++){
+//         for(int n = 0; n < 16; n++){
+//             for(int m = 0; m < 12; m++){
+//                 if(strcmp(day[month][j]->table[n]->customer[n], day[month][j]->table[n]->customer[n-1]) == 0) continue;
+//                 w5_profit += day[month][j]->table[n]->customer[m]->price;
+//             }
+//         }
+//     }
+// }
 
 void showGraph(day day) {
     int month;
@@ -80,7 +80,7 @@ void showGraph(day day) {
 
         // 같은 손님이 연속으로 예약한 경우 건너뛰기
         for (int n = 0; n < 16; n++) {
-            for (int m = 0; m < 11; m++) {
+            for (int m = 0; m <= 11; m++) {
                 if (strcmp(day[month][j].table[n]->customer[m], day[month][j].table[n]->customer[m + 1]) == 0) {
                     m++;  // 다음 손님으로 건너뛰기
                 } else {
