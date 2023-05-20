@@ -14,11 +14,10 @@ struct CUSTOMER{
     int phoneNum;       //전화번호
     int price;          //지불해야하는 가격
     int isPaid;         //지불했는지 여부
-    char time[SIZE];    //시간
+    char time[12];      //시간
     char Menu[SIZE];    //메뉴
     char extra[SIZE];   //기타
     int nop;            //(설명필요!)
-
 };
 
 struct Table{
@@ -35,7 +34,7 @@ typedef struct Day{
 
 
 typedef struct Menu{ 
-    char foodName[50];    //음식 이름
+    char foodName[50];      //음식 이름
     int foodPrice;          //음식 가격
     int count;              //음식 팔린 횟수 --> 매출 추이 분석 때 사용           
 }bunsik[4];
