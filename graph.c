@@ -94,7 +94,7 @@ void showGraph(day day) {
     for (int i = 0; i < 5; i++) {
         printf("주차 %d |", i + 1);
         for (int j = 0; j < weekly_profit[i]; j += 10000) {     //단위 만원
-            printf("-");
+            printf("■");
         }
         printf("|");
         printf(" %d\n", weekly_profit[i]);
