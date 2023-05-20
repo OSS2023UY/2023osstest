@@ -32,7 +32,7 @@ void calProfit(day *day){
         for(int n = 0; n < 16; n++){
             for(int m = 0; m < 12; m++){
                 if(strcmp(day[month][j]->table[n]->customer[n], day[month][j]->table[n]->customer[n-1]) == 0) continue;
-                w1_profit += day[month][j]->table[n]->customer[m]->price;
+                w2_profit += day[month][j]->table[n]->customer[m]->price;
             }
         }
     }
@@ -41,7 +41,7 @@ void calProfit(day *day){
         for(int n = 0; n < 16; n++){
             for(int m = 0; m < 12; m++){
                 if(strcmp(day[month][j]->table[n]->customer[n], day[month][j]->table[n]->customer[n-1]) == 0) continue;
-                w1_profit += day[month][j]->table[n]->customer[m]->price;
+                w3_profit += day[month][j]->table[n]->customer[m]->price;
             }
         }
     }
@@ -50,7 +50,7 @@ void calProfit(day *day){
         for(int n = 0; n < 16; n++){
             for(int m = 0; m < 12; m++){
                 if(strcmp(day[month][j]->table[n]->customer[n], day[month][j]->table[n]->customer[n-1]) == 0) continue;
-                w1_profit += day[month][j]->table[n]->customer[m]->price;
+                w4_profit += day[month][j]->table[n]->customer[m]->price;
             }
         }
     }
@@ -59,7 +59,7 @@ void calProfit(day *day){
         for(int n = 0; n < 16; n++){
             for(int m = 0; m < 12; m++){
                 if(strcmp(day[month][j]->table[n]->customer[n], day[month][j]->table[n]->customer[n-1]) == 0) continue;
-                w1_profit += day[month][j]->table[n]->customer[m]->price;
+                w5_profit += day[month][j]->table[n]->customer[m]->price;
             }
         }
     }
