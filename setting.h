@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 #define MAX_DATES 365
 #define MAX_TABLES 16
@@ -11,9 +12,9 @@
 #define MAX_MONTHS 12
 #define MAX_FOOD_ITEMS 3
 #define SIZE 50
+#define Q_SIZE 6
 
-
-struct Customer {
+typedef struct {
     char name[SIZE];
     int people;
     int phoneNum;
@@ -22,26 +23,30 @@ struct Customer {
     char Menu[SIZE];
     char extra[SIZE];
     int full;
-};
+} Customer;
 
-struct Table {
-    struct Customer customer[MAX_CUSTOMERS];
+typedef struct {
+    Customer customer[MAX_CUSTOMERS];
     int isFull;
-};
+} Table;
 
-struct Date {
-    struct Table tables[16];
+typedef struct {
+    Table tables[MAX_TABLES];
     int isFull;
-};
+} Date;
 
-struct Menu {
-    char foodName[50];
+typedef struct {
+    char foodName[SIZE];
     int foodPrice;
     int count;
-};
+} Menu;
 
-struct Menu menu[4];
-struct Date dates[12][31];
+typedef struct {
+    Customer q[Q_SIZE];
+    int front, rear;
+} my_queue;
 
+Date dates[12][31];
+Menu menu[4];
 
 #endif

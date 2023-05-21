@@ -36,6 +36,7 @@ void addSeat(int mm, int dd, int tableNumber, char guestName[], int guestPhone, 
             for(int i=time-1; i<reservationDuration+time-1; i++){
                 if (dates[m][d].tables[tableNumber].customer[i].full !=0) {
                     printf("해당 시간에는 예약이 이미 있습니다.\n");
+                    
                     return;
                 }
             }
