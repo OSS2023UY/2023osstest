@@ -1,8 +1,12 @@
 #include "CRUD.h"
+#include "file.h"
+#include "graph.h"
+#include "menu.h"
+#include "rest.h"
+#include "search.h"
+#include "calendar.h"
 
 void showMenu();
-
-
 
 int main() {
 
@@ -143,11 +147,7 @@ do {
             printList();
             break;
         case 11:
-            printf("프로그램을 종료합니다.\n");
-            break;
-    
-        default:
-            printf("유효하지 않은 선택입니다. 다시 시도하세요.\n");
+            
             break;
     }
 
@@ -171,7 +171,7 @@ void showMenu(){
     printf("│ 7. 매출추이 확인 │\n");
     printf("│ 8. 휴업날짜 선택 │\n");
     printf("│ 9. 파일 저장     │\n");
-    printf("│ 10. 파일 열기     │\n");
+    printf("│ 10. 파일 열기    │\n");
     printf("│ 11. 대기명단 확인│\n");
     printf("└──────────────────┘\n");
 }
