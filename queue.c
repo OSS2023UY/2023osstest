@@ -16,12 +16,12 @@ void insert_q(my_queue *queue, Customer x) {
     x.isQueued++;
 }
 
-void delete_q(my_queue *queue) {
-    if (queue->front == (queue->rear + 1) % Q_SIZE) {
-        printf("[삭제 실패] 대기 명단이 비어있습니다\n");
-        return -1;
-    }
-}
+// void delete_q(my_queue *queue) {
+//     if (queue->front == (queue->rear + 1) % Q_SIZE) {
+//         printf("[삭제 실패] 대기 명단이 비어있습니다\n");
+//         return -1;
+//     }
+// }
 
 bool queue_full(my_queue *queue) {
     return (queue->rear + 1) % Q_SIZE == queue->front;
