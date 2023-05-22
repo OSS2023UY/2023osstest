@@ -25,7 +25,7 @@ typedef struct {
     int full;
     int tableNum;
     int orderedDay;
-    int orderedTime;
+    char orderedTime;
 } Customer;
 
 typedef struct {

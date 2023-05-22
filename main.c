@@ -34,6 +34,7 @@ int month, year;
 int menuCount, Phone;
 int mm, dd;
 int time;
+my_queue queues;
 
 ResetMenu();
 
@@ -147,7 +148,7 @@ do {
             printList();
             break;
         case 11:
-            
+            showQueue(queues);
             break;
     }
 
