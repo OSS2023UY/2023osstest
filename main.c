@@ -5,6 +5,7 @@
 #include "rest.h"
 #include "search.h"
 #include "calendar.h"
+#include "queue.h"
 
 void showMenu();
 
@@ -148,7 +149,7 @@ do {
             printList();
             break;
         case 11:
-            showQueue(queues);
+            showQueue(&queues);
             break;
     }
 

@@ -53,10 +53,6 @@ void showQueue(my_queue *queue){
             }
         }
     }
-        
-    
-    
-    
 }
 
 
