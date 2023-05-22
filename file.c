@@ -1,32 +1,33 @@
-#include "setting.h"
 #include "CRUD.h"
+#include "setting.h"
+#include "queue.h"
 
-// ÆÄÀÏ ÀúÀå ÇÔ¼ö
+// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
 void saveList(int mm) {
     char filename[100];
 
     sprintf(filename, "%d", mm);
 
     FILE *fp;
-    fp = fopen(filename, "w"); // »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ÆÄÀÏ ÀÌ¸§À¸·Î ÆÄÀÏ ¿­±â
+    fp = fopen(filename, "w"); // ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     if (fp == NULL) {
-        printf("ÆÄÀÏÀ» ¿­ ¼ö ¾ø½À´Ï´Ù.\n");
+        printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.\n");
         return;
     }
 
-    //ÃÑ¸ÅÃâ °è»ê
-    int weekly_profit[5] = {0, 0, 0, 0, 0};  // ÁÖº° ¸ÅÃâ ¹è¿­ ÃÊ±âÈ­
+    //ï¿½Ñ¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+    int weekly_profit[5] = {0, 0, 0, 0, 0};  // ï¿½Öºï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ ï¿½Ê±ï¿½È­
 
     for (int j = 0; j < 31; j++) {
-        // ÇØ´ç ¿ùÀÇ ÁÖÂ÷ °è»ê
+        // ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         int week = j / 7;
 
-        // °°Àº ¼Õ´ÔÀÌ ¿¬¼ÓÀ¸·Î ¿¹¾àÇÑ °æ¿ì °Ç³Ê¶Ù±â
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ç³Ê¶Ù±ï¿½
         for (int n = 0; n < 16; n++) {
             for (int m = 0; m < 12; m++) {
                 if (strcmp(dates[mm - 1][j].tables[n].customer[m].name, dates[mm - 1][j].tables[n].customer[m + 1].name) == 0) {
-                    m++;  // ´ÙÀ½ ¼Õ´ÔÀ¸·Î °Ç³Ê¶Ù±â
+                    m++;  // ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç³Ê¶Ù±ï¿½
                 } else {
                     weekly_profit[week] += dates[mm - 1][j].tables[n].customer[m].price;
                 }
@@ -34,18 +35,18 @@ void saveList(int mm) {
         }
     }
 
-    int totalMoney=0; //ÃÑ¸ÅÃâ
+    int totalMoney=0; //ï¿½Ñ¸ï¿½ï¿½ï¿½
     for(int i=0; i<5; i++){
         totalMoney+=weekly_profit[i];
     }
 
 
-    int totalCount=0; // ÆÈ¸° À½½Ä °³¼ö
+    int totalCount=0; // ï¿½È¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     for (int j = 0; j < 31; j++) {
         for (int n = 0; n < 16; n++) {
                 for (int m = 0; m < 12; m++) {
                     if (strcmp(dates[mm - 1][j].tables[n].customer[m].name, dates[mm - 1][j].tables[n].customer[m + 1].name) == 0) {
-                        m++;  // ´ÙÀ½ ¼Õ´ÔÀ¸·Î °Ç³Ê¶Ù±â
+                        m++;  // ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç³Ê¶Ù±ï¿½
                     } else {
                         totalCount += dates[mm - 1][j].tables[n].customer[m].people;
                     }
@@ -53,14 +54,14 @@ void saveList(int mm) {
             }
     }
     
-    //°¡Àå ¸¹ÀÌ ÆÈ¸° À½½Ä
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½È¸ï¿½ ï¿½ï¿½ï¿½ï¿½
       int bestMenu[4]={0};
     for (int j = 0; j < 31; j++) {
       
         for (int n = 0; n < 16; n++) {
                 for (int m = 0; m < 12; m++) {
                     if (strcmp(dates[mm - 1][j].tables[n].customer[m].name, dates[mm - 1][j].tables[n].customer[m + 1].name) == 0) {
-                        m++;  // ´ÙÀ½ ¼Õ´ÔÀ¸·Î °Ç³Ê¶Ù±â
+                        m++;  // ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç³Ê¶Ù±ï¿½
                     } else {
                         if(strcmp(dates[mm-1][j].tables[n].customer[m].Menu, "ChickenSkewer")) bestMenu[0] +=dates[mm - 1][j].tables[n].customer[m].people;
                         else if(strcmp(dates[mm-1][j].tables[n].customer[m].Menu, "Ramen")) bestMenu[1] +=dates[mm - 1][j].tables[n].customer[m].people;
@@ -83,30 +84,30 @@ void saveList(int mm) {
     else if(max ==best[3]) strcpy(best,"Tteokbokki");
 
 
-    fprintf(fp, "!%d¿ù! \nÃÑ¸ÅÃâÀº %dÀÔ´Ï´Ù.\nÆÈ¸°À½½ÄÀÇ °³¼ö´Â %d°³ ÀÔ´Ï´Ù. \n°¡Àå ¸¹ÀÌ ÆÈ¸° À½½ÄÀº %sÀÔ´Ï´Ù.", mm, totalMoney, totalCount, best);
+    fprintf(fp, "!%dï¿½ï¿½! \nï¿½Ñ¸ï¿½ï¿½ï¿½ï¿½ï¿½ %dï¿½Ô´Ï´ï¿½.\nï¿½È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ %dï¿½ï¿½ ï¿½Ô´Ï´ï¿½. \nï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½È¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ %sï¿½Ô´Ï´ï¿½.", mm, totalMoney, totalCount, best);
 
-    fclose(fp); // ÆÄÀÏ ´Ý±â
+    fclose(fp); // ï¿½ï¿½ï¿½ï¿½ ï¿½Ý±ï¿½
 }
 
-// ÆÄÀÏ Ãâ·Â ÇÔ¼ö
+// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½
 void printList() {
     FILE *fp;
     char filename[100];
     int countt = 0;
     char line[100];
 
-    printf("ÆÄÀÏÀÇ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+    printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½: ");
     scanf("%s", filename);
-    fp = fopen(filename, "r"); // ÆÄÀÏ ¿­±â
+    fp = fopen(filename, "r"); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     if (fp == NULL) {
-        printf("ÆÄÀÏÀ» ¿­ ¼ö ¾ø½À´Ï´Ù.\n");
+        printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.\n");
         return;
     }
 
-    printf("ÆÄÀÏ ³»¿ë:\n");
+    printf("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½:\n");
 
-    // ÆÄÀÏÀÇ ³»¿ëÀ» ÇÑ ÁÙ¾¿ ÀÐ¾î¼­ Ãâ·Â
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ù¾ï¿½ ï¿½Ð¾î¼­ ï¿½ï¿½ï¿½
     while (fgets(line, sizeof(line), fp) != NULL) {
         printf("%s", line);
         countt++;

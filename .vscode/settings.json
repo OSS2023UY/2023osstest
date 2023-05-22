@@ -1,5 +1,8 @@
 {
     "githubPullRequests.ignoredPullRequestBranches": [
         "main"
-    ]
+    ],
+    "files.associations": {
+        "queue.h": "c"
+    }
 }
