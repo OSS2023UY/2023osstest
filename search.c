@@ -1,6 +1,5 @@
 #include "CRUD.h"
 #include "setting.h"
-#include "queue.h"
 
 void search(int mm, int dd, char guestName[]) {
     // 날짜 인덱스 계산
