@@ -15,7 +15,7 @@ void addSeat(int mm, int dd, int tableNumber, char guestName[], int guestPhone, 
     // 날짜 인덱스 계산
     int m = mm-1;
     int d =dd-1;
-
+    char timeString[50];
     // 날짜 확인
     
         // 날짜가 가득 찼는지 확인
@@ -60,6 +60,9 @@ void addSeat(int mm, int dd, int tableNumber, char guestName[], int guestPhone, 
                 dates[m][d].tables[tableNumber].customer[i].price = menu[menuChoice-1].foodPrice * menuCount;
                 dates[m][d].tables[tableNumber].customer[i].people = menuCount;
                 dates[m][d].tables[tableNumber].customer[i].tableNum = tableNumber+1;
+                dates[m][d].tables[tableNumber].customer[i].orderedDay = dd;
+                snprintf(timeString, sizeof(timeString), "%d:00 - %d:00", time, time + reservationDuration);
+                dates[m][d].tables[tableNumber].customer[i].orderedTime = strdup(timeString);
             }
             
 
