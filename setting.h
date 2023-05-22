@@ -15,7 +15,7 @@
 #define Q_SIZE 6
 
 typedef struct {
-    char name[SIZE];
+    char name[SIZE];                    //이름
     int people;
     int phoneNum;
     int price;
@@ -23,16 +23,22 @@ typedef struct {
     char Menu[SIZE];
     char extra[SIZE];
     int full;
+    int tableNum;
+    int orderedDay;
+    int orderedTime;
 } Customer;
 
 typedef struct {
     Customer customer[MAX_CUSTOMERS];
     int isFull;
+    int isQueued;
+    my_queue queued;
 } Table;
 
 typedef struct {
     Table tables[MAX_TABLES];
     int isFull;
+    int isQueued;
 } Date;
 
 typedef struct {
@@ -42,7 +48,7 @@ typedef struct {
 } Menu;
 
 typedef struct {
-    Customer q[Q_SIZE];
+    Customer q[Q_SIZE];     //최대 5명 대기 가능
     int front, rear;
 } my_queue;
 

@@ -31,12 +31,22 @@ void addSeat(int mm, int dd, int tableNumber, char guestName[], int guestPhone, 
                     printf("해당 테이블은 이미 예약이 가득 찼습니다.\n");
                     return;
                 }
-
-                //선택한 시간이 예약 가능한 지 확인
-            for(int i=time-1; i<reservationDuration+time-1; i++){
+            int choice;
+            //선택한 시간이 예약 가능한 지 확인
+            for(int i = time-1; i < reservationDuration+time-1; i++){
                 if (dates[m][d].tables[tableNumber].customer[i].full !=0) {
                     printf("해당 시간에는 예약이 이미 있습니다.\n");
-                    
+                    printf("해당 시간에 대기하시겠습니까? (Yes : 1 | No : 0)\n");
+                    scanf("%d", &choice);
+                    //Yes
+                    if(choice == 1){
+                        my_queue queue;
+                        dates[m][d].isQueued++;
+                        dates[m][d].tables[tableNumber].isQueued++;
+                        queue = dates[m][d].tables[tableNumber].queued;
+                        insert_q(&queue, dates[m][d].tables[tableNumber].customer[i]);
+                    }
+                    //No
                     return;
                 }
             }
@@ -49,6 +59,7 @@ void addSeat(int mm, int dd, int tableNumber, char guestName[], int guestPhone, 
                 strcpy(dates[m][d].tables[tableNumber].customer[i].Menu, menu[menuChoice-1].foodName);
                 dates[m][d].tables[tableNumber].customer[i].price = menu[menuChoice-1].foodPrice * menuCount;
                 dates[m][d].tables[tableNumber].customer[i].people = menuCount;
+                dates[m][d].tables[tableNumber].customer[i].tableNum = tableNumber+1;
             }
             
 
