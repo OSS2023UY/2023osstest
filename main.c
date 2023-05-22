@@ -112,10 +112,8 @@ do {
             printf("날짜를 입력하세요(월 일) : ");
             scanf("%d %d", &mm, &dd);
 
-
             printf("손님 이름을 입력하세요: ");
             scanf("%s", guestName);
-
 
             search(mm,dd, guestName);
             break;
@@ -141,7 +139,6 @@ do {
         case 9:
             printf("파일에 정보를 저장할 월을 입력하세요: ");
             scanf("%d", mm);
-
             saveList(mm);
             break;
         case 10:
