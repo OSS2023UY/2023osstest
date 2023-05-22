@@ -56,7 +56,7 @@ do {
             printf("테이블 번호를 입력하세요 (0-15): ");
             scanf("%d", &tableNumber);
 
-            printf("손님 이름을 입력하세요: ");
+            printf("손님 이름을 입력하세요(띄어쓰기 없이): ");
             scanf("%s", guestName);
            // getchar();
 
@@ -103,7 +103,7 @@ do {
             printf("손님 이름을 입력하세요: ");
             scanf("%s", guestName);
 
-            printf("손님 전화번호를 입력하세요: ");
+            printf("손님 전화번호를 입력하세요(띄어쓰기 없이): ");
             scanf("%d", &Phone);
 
             deleteSeat(mm,dd, tableNumber, guestName, Phone);
