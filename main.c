@@ -45,12 +45,12 @@ do {
 
     switch (selc) {
         case 1:
-            printf("날짜를 입력하세요 : ");
+            printf("날짜를 입력하세요(월 일) : ");
             scanf("%d %d", &mm, &dd);
             listSeat(mm, dd);
             break;
         case 2:
-            printf("날짜를 입력하세요 : ");
+            printf("날짜를 입력하세요(월 일) : ");
             scanf("%d %d", &mm, &dd);
 
             printf("테이블 번호를 입력하세요 (0-15): ");
@@ -81,7 +81,7 @@ do {
             break;
         case 3:
             printMenu() ;
-            printf("날짜를 입력하세요 : ");
+            printf("날짜를 입력하세요(월 일) : ");
             scanf("%d %d", &mm, &dd);
 
             printf("테이블 번호를 입력하세요 (0-15): ");
@@ -94,7 +94,7 @@ do {
             updateSeat(mm,dd, tableNumber, guestName);
             break;
         case 4:
-            printf("날짜를 입력하세요 : ");
+            printf("날짜를 입력하세요(월 일) : ");
             scanf("%d %d", &mm, &dd);
 
             printf("테이블 번호를 입력하세요 (0-15): ");
@@ -109,7 +109,7 @@ do {
             deleteSeat(mm,dd, tableNumber, guestName, Phone);
             break;
         case 5:
-            printf("날짜를 입력하세요 : ");
+            printf("날짜를 입력하세요(월 일) : ");
             scanf("%d %d", &mm, &dd);
 
 

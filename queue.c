@@ -38,7 +38,7 @@ void showQueue(my_queue *queue){
     scanf("%d",&month);
 
     //대기가 존재하는 날짜와 테이블 손님을 찾기(날짜를 출력하기 위해서)
-    
+    printf("<현재 대기 명단>\n");
     for(int i = 0; i < 31; i++){
         if(dates[month-1][i].isQueued > 0){
             //[날짜]
