@@ -1,5 +1,6 @@
-#include "setting.h"
 #include "CRUD.h"
+#include "setting.h"
+#include "queue.h"
 
 void showGraph(int mm) {
     printf("%d월 매출 추이 (단위: 만원)\n", mm);

@@ -1,4 +1,6 @@
 #include "CRUD.h"
+#include "setting.h"
+#include "queue.h"
 
 void ResetMenu(){     //메뉴 초기화 함수, 생성자 역할을 하기 때문에 한번은 호출할
 

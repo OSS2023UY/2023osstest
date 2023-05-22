@@ -1,8 +1,8 @@
 #ifndef CRUD_H
 #define CRUD_H
+#include "CRUD.h"
 #include "setting.h"
-
-
+#include "queue.h"
 
 void printMenu();
 void addSeat(int mm, int dd, int tableNumber, char guestName[], int guestPhone, int reservationDuration, int menuChoice, int menuCount, int time);

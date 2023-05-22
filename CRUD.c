@@ -1,6 +1,6 @@
 #include "CRUD.h"
-#include <string.h>
-
+#include "setting.h"
+#include "queue.h"
 
 
 void printMenu() {
@@ -82,9 +82,7 @@ void addSeat(int mm, int dd, int tableNumber, char guestName[], int guestPhone, 
                  printf("테이블 번호를 잘못 입력하셨습니다. \n");
                  return;
             }
-           
-        
-    
+
 }
 
 
