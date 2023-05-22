@@ -15,7 +15,6 @@ void addSeat(int mm, int dd, int tableNumber, char guestName[], int guestPhone, 
     // 날짜 인덱스 계산
     int m = mm-1;
     int d =dd-1;
-    char timeString[50];
     // 날짜 확인
     
         // 날짜가 가득 찼는지 확인
@@ -40,10 +39,8 @@ void addSeat(int mm, int dd, int tableNumber, char guestName[], int guestPhone, 
                     scanf("%d", &choice);
                     //Yes
                     if(choice == 1){
-                        my_queue queue;
                         dates[m][d].isQueued++;
-                        dates[m][d].tables[tableNumber].isQueued++;
-                        queue = dates[m][d].tables[tableNumber].queued;
+                        dates[m][d].tables[tableNumber].customer[i].isQueued++;
                         insert_q(&queue, dates[m][d].tables[tableNumber].customer[i]);
                     }
                     //No
@@ -61,8 +58,15 @@ void addSeat(int mm, int dd, int tableNumber, char guestName[], int guestPhone, 
                 dates[m][d].tables[tableNumber].customer[i].people = menuCount;
                 dates[m][d].tables[tableNumber].customer[i].tableNum = tableNumber+1;
                 dates[m][d].tables[tableNumber].customer[i].orderedDay = dd;
-                snprintf(timeString, sizeof(timeString), "%d:00 - %d:00", time, time + reservationDuration);
-                dates[m][d].tables[tableNumber].customer[i].orderedTime = strdup(timeString);
+                char timeString[50] = {0};
+                char ctime[3];
+                char cduration[3];
+                sprintf(ctime, "%d", time);
+                sprintf(cduration, "%d", time + reservationDuration);
+                strcpy(timeString, ctime);
+                strcat(timeString, ":00 - ");
+                strcat(timeString, cduration);
+                strcat(timeString, ":00\n");
             }
             
 

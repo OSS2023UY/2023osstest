@@ -1,5 +1,6 @@
 #ifndef SETTING_H
 #define SETTING_H
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -14,8 +15,10 @@
 #define SIZE 50
 #define Q_SIZE 6
 
+typedef struct my_queue my_queue; // 구조체 이름을 미리 선언
+
 typedef struct {
-    char name[SIZE];                    //이름
+    char name[SIZE];         // 이름
     int people;
     int phoneNum;
     int price;
@@ -25,16 +28,19 @@ typedef struct {
     int full;
     int tableNum;
     int orderedDay;
-    char orderedTime;
+    char orderedTime[SIZE];
     int isQueued;
 } Customer;
 
 typedef struct {
     Customer customer[MAX_CUSTOMERS];
     int isFull;
-    int isQueued;
-    my_queue queued;
 } Table;
+
+struct my_queue {
+    Customer q[Q_SIZE];     // 최대 5명 대기 가능
+    int front, rear;
+};
 
 typedef struct {
     Table tables[MAX_TABLES];
@@ -48,11 +54,7 @@ typedef struct {
     int count;
 } Menu;
 
-typedef struct {
-    Customer q[Q_SIZE];     //최대 5명 대기 가능
-    int front, rear;
-} my_queue;
-
+my_queue queue;
 Date dates[12][31];
 Menu menu[4];
 
