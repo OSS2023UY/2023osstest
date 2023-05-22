@@ -30,4 +30,16 @@ bool queue_empty(my_queue *queue) {
     return queue->front == (queue->rear + 1) % Q_SIZE;
 }
 
+void showQueue(my_queue *queue){
+
+    if (queue_empty(queue)) {
+        printf("대기 명단이 비어있습니다.\n");
+        return;
+    }
+    
+    while(queue_empty(queue) != true){
+        printf("%d");
+    }
+}
+
 

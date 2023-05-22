@@ -173,6 +173,7 @@ void showMenu(){
     printf("│ 9. 파일 저장     │\n");
     printf("│ 10. 파일 열기    │\n");
     printf("│ 11. 대기명단 확인│\n");
+    printf("│ 0. 종료          │\n");
     printf("└──────────────────┘\n");
 }
 
