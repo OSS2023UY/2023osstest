@@ -138,7 +138,7 @@ do {
             break;
         case 9:
             printf("파일에 정보를 저장할 월을 입력하세요: ");
-            scanf("%d", mm);
+            scanf("%d", &mm);
             saveList(mm);
             break;
         case 10:
